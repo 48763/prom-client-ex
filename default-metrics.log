@@ -1,0 +1,95 @@
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 30228480 1536227452244
+
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 1000202240 1536227452244
+
+# HELP process_heap_bytes Process heap size in bytes.
+# TYPE process_heap_bytes gauge
+process_heap_bytes 955699200 1536227452244
+
+# HELP linux_memory_total Total installed memory (MemTotal and SwapTotal in /proc/meminfo)
+# TYPE linux_memory_total gauge
+linux_memory_total 2097844224 1536227452245
+
+# HELP linux_memory_available Estimation of how much memory  is  available  for  starting  new applications,  without swapping
+# TYPE linux_memory_available gauge
+linux_memory_available 1716080640 1536227452245
+
+# HELP linux_memory_free Unused memory (MemFree and SwapFree in /proc/meminfo)
+# TYPE linux_memory_free gauge
+linux_memory_free 342994944 1536227452245
+
+# HELP linux_memory_used Used memory (calculated as total - free - buffers - cache)
+# TYPE linux_memory_used gauge
+linux_memory_used 383401984 1536227452245
+
+# HELP linux_buffers Memory used by kernel buffers (Buffers in /proc/meminfo)
+# TYPE linux_buffers gauge
+linux_buffers 210558976 1536227452245
+
+# HELP linux_cached Memory  used  by  the  page  cache and slabs (Cached and Slab in /proc/meminfo)
+# TYPE linux_cached gauge
+linux_cached 1160888320 1536227452245
+
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 12 1536227452242
+
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 201842
+
+# HELP nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE nodejs_eventloop_lag_seconds gauge
+nodejs_eventloop_lag_seconds 0.011472109 1536227452242
+
+# HELP nodejs_active_handles_total Number of active handles.
+# TYPE nodejs_active_handles_total gauge
+nodejs_active_handles_total 0 1536227452231
+
+# HELP nodejs_active_requests_total Number of active requests.
+# TYPE nodejs_active_requests_total gauge
+nodejs_active_requests_total 5 1536227452231
+
+# HELP nodejs_heap_size_total_bytes Process heap size from node.js in bytes.
+# TYPE nodejs_heap_size_total_bytes gauge
+nodejs_heap_size_total_bytes 11567104 1536227452231
+
+# HELP nodejs_heap_size_used_bytes Process heap size used from node.js in bytes.
+# TYPE nodejs_heap_size_used_bytes gauge
+nodejs_heap_size_used_bytes 5596432 1536227452231
+
+# HELP nodejs_external_memory_bytes Nodejs external memory size in bytes.
+# TYPE nodejs_external_memory_bytes gauge
+nodejs_external_memory_bytes 52262 1536227452231
+
+# HELP nodejs_heap_space_size_total_bytes Process heap space size total from node.js in bytes.
+# TYPE nodejs_heap_space_size_total_bytes gauge
+nodejs_heap_space_size_total_bytes{space="new"} 4194304 1536227452231
+nodejs_heap_space_size_total_bytes{space="old"} 4149248 1536227452231
+nodejs_heap_space_size_total_bytes{space="code"} 2097152 1536227452231
+nodejs_heap_space_size_total_bytes{space="map"} 1126400 1536227452231
+nodejs_heap_space_size_total_bytes{space="large_object"} 0 1536227452231
+
+# HELP nodejs_heap_space_size_used_bytes Process heap space size used from node.js in bytes.
+# TYPE nodejs_heap_space_size_used_bytes gauge
+nodejs_heap_space_size_used_bytes{space="new"} 1147352 1536227452231
+nodejs_heap_space_size_used_bytes{space="old"} 3157936 1536227452231
+nodejs_heap_space_size_used_bytes{space="code"} 944320 1536227452231
+nodejs_heap_space_size_used_bytes{space="map"} 358424 1536227452231
+nodejs_heap_space_size_used_bytes{space="large_object"} 0 1536227452231
+
+# HELP nodejs_heap_space_size_available_bytes Process heap space size available from node.js in bytes.
+# TYPE nodejs_heap_space_size_available_bytes gauge
+nodejs_heap_space_size_available_bytes{space="new"} 916008 1536227452231
+nodejs_heap_space_size_available_bytes{space="old"} 120 1536227452231
+nodejs_heap_space_size_available_bytes{space="code"} 192 1536227452231
+nodejs_heap_space_size_available_bytes{space="map"} 0 1536227452231
+nodejs_heap_space_size_available_bytes{space="large_object"} 1485782528 1536227452231
+
+# HELP nodejs_version_info Node.js version info.
+# TYPE nodejs_version_info gauge
+nodejs_version_info{version="v6.14.3",major="6",minor="14",patch="3"} 1
