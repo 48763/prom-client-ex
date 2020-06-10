@@ -3,6 +3,8 @@
 const express = require('express');
 const client = require('prom-client');
 const httpRequest = require('./metrics/httpRequest');
+const osCpuInfoLinux = require('./metrics/osCpuInfoLinux');
+const osMemoryInfoLinux = require('./metrics/osMemoryInfoLinux');
 
 const app = express();
 const port = 9300;
@@ -42,6 +44,8 @@ app.use((err, req, res, next) => {
 
 // Runs after each requests
 app.use(httpRequest(registry));
+app.use(osCpuInfoLinux(registry));
+app.use(osMemoryInfoLinux(registry));
 
 const server = app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
