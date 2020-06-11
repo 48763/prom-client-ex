@@ -72,7 +72,7 @@ module.exports = (registry, config = {}) => {
 		registers
     });	
 
-	return (next) => {
+	return (req, res, next) => {
 		fs.readFile('/proc/meminfo', 'utf8', (err, status) => {
 			if (err) {
 				return;

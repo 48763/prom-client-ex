@@ -147,7 +147,7 @@ module.exports = (registry, config = {}) => {
 	    registers
     });
 
-    return (next) => {
+    return (req, res, next) => {
 	    fs.readFile('/proc/stat', 'utf8', (err, status) => {
 		if (err) {
 				return;
