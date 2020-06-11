@@ -147,8 +147,8 @@ module.exports = (registry, config = {}) => {
 	    registers
     });
 
-  return () => {
-	  fs.readFile('/proc/stat', 'utf8', (err, status) => {
+    return (next) => {
+	    fs.readFile('/proc/stat', 'utf8', (err, status) => {
 		if (err) {
 				return;
 			}
@@ -168,7 +168,8 @@ module.exports = (registry, config = {}) => {
             
             osCpuSystemRateGauge.set(structuredOutput.system_rate, now);
             osCpuUserRateGauge.set(structuredOutput.user_rate, now);
-		});
+        });
+        next();
 	};
 };
 

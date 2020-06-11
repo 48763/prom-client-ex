@@ -1,5 +1,4 @@
 *
-!src/
-src/example
-src/test
-node_modules
+!src/server.js
+!src/metrics
+!src/package.json

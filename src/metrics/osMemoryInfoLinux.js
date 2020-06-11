@@ -72,7 +72,7 @@ module.exports = (registry, config = {}) => {
 		registers
     });	
 
-	return () => {
+	return (next) => {
 		fs.readFile('/proc/meminfo', 'utf8', (err, status) => {
 			if (err) {
 				return;
@@ -88,6 +88,7 @@ module.exports = (registry, config = {}) => {
 			osBuffersGauge.set(structuredOutput.Buffers, now);
 			osCachedGauge.set(structuredOutput.Cached, now);
 		});
+		next();
 	};
 };
 
