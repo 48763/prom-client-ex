@@ -24,7 +24,7 @@ $ sudo docker build -t prom-client . -f Docker/dockerfile
 $ sudo docker run --name prom-client \
     -p 9300:9300 \
     -v $(pwd)/src:/usr/app/prom-client \
-    -d prom-client
+    -d prom-client npm run dev
 ```
 
 ### 正式
