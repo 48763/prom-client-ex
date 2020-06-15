@@ -3,8 +3,8 @@
 const client = require('prom-client');
 const globalRegistry = new client.Registry();
 
-const osCpuInfoLinux = require('./osCpuInfoLinux');
-const osMemoryInfoLinux = require('./osMemoryInfoLinux');
+const osCpuInfoLinux = require('./metrics/osCpuInfoLinux');
+const osMemoryInfoLinux = require('./metrics/osMemoryInfoLinux');
 
 const metrics = {
 	osCpuInfoLinux,

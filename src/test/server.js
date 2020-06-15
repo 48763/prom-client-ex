@@ -9,19 +9,17 @@ const Registry = client.Registry;
 const register = new Registry();
 const collectDefaultMetrics = client.collectDefaultMetrics;
 
-const httpRequest = require('./httpRequest');
+const httpRequest = require('./metrics/httpRequest');
 const registryModule = require('./registryModule');
 
-registryModule({register});
+registryModule({register, timeout : 2000 });
 collectDefaultMetrics({register});
-
-
 
 // Runs before each requests
 app.use((req, res, next) => {
   res.locals.startEpoch = Date.now();
   next();
-})
+});
 
 app.get('/favicon.ico', (req, res) => {
     res.status(204);
@@ -37,7 +35,7 @@ app.get('/', (req, res, next) => {
 app.get('/metrics', (req, res, next) => {
   res.end(register.metrics());
   next();
-})
+});
 
 // Error handler
 app.use((err, req, res, next) => {

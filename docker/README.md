@@ -13,7 +13,7 @@ $ cd prom-client-ex
 ## 建立鏡像
 
 ```bash
-$ sudo docker build -t prom-client . -f Docker/dockerfile
+$ sudo docker build -t prom-client . -f docker/Dockerfile
 ```
 
 ## 啟動容器 

@@ -35,9 +35,9 @@ module.exports = (registry, config = {}) => {
                 method : req.method, 
                 statusCode : res.statusCode,
                 localsStartEpoch : res.locals.startEpoch
-              }
-          });
-          next();
+            }
+        });
+        next();
     };
 };
 
