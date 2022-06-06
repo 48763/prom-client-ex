@@ -26,7 +26,7 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/favicon.ico', (req, res) => {
-    res.status(204);
+    res.status(204).send();
 });
 
 app.get('/metrics', (req, res, next) => {
